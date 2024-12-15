@@ -2,22 +2,31 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+
+
+
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })
 export class LandingPageComponent {
+
+  toggleDarkMode() {
+    document.body.classList.toggle('dark');
+  }
+  
   fromoption: string = ''
   tooption: string = ''
   date: string = ''
   constructor(private router: Router, public dialog: MatDialog) { }
   fromEvent(option: string) {
     this.fromoption = option;
-    console.log(this.fromoption)
+    console.log('option:',this.fromoption)
   }
   toEvent(option: string) {
     this.tooption = option;
+    console.log('option:',this.tooption)
   }
   matchDate(event: any) {
     if (event.value) {
@@ -29,7 +38,7 @@ export class LandingPageComponent {
     } else {
       this.date = 'null';
     }
-    console.log(this.date)
+    console.log('option:' , this.date)
   }
   submit() {
     if (this.fromoption && this.tooption && this.date) {

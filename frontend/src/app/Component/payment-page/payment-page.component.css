@@ -231,3 +231,7 @@ body {
     width:auto;
     height:auto
   }
+ body.dark-mode .payment__fullContainer_rightContainer_trip_container {
+  background-color: #1d1c1c;
+ }
+

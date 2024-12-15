@@ -7,7 +7,7 @@ exports.getoneroute = async(req,res) => {
     let arrival= req.params.arrival;
     let date= req.params.date;
 
-    // console.log(departure,arrival,date)
+    console.log(departure,arrival,date)
     let routes=await Route.find().lean().exec();
     let route=routes.find((route)=>{
         return(
@@ -17,9 +17,10 @@ exports.getoneroute = async(req,res) => {
     });
     let buses=await Bus.find();
     let matchedbuses=buses.filter((bus)=>{
-        return bus.routes.toString()=== route._id.toString();
+        return bus.routes.toString() === route._id.toString();
     })
-
+    
+    console.log(matchedbuses)
     const booking =await Booking.find().lean().exec();
     const busidwithseatobj={}
     for (let i=0;i<matchedbuses.length;i++){

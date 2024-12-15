@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@angular/animations": "^19.0.3",
+    "@angular/cdk": "^19.0.2",
+    "@angular/material": "^19.0.2",
+    "darkmode-js": "^1.5.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
+  }
+}

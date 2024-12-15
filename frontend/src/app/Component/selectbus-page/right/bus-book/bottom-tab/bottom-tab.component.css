@@ -36,3 +36,16 @@
     width: 100%;
     height: 100%;
   }
+  /* Dark mode styles */
+body.dark-mode .mainBar > div {
+  color: white;  /* Change text color to white */
+}
+
+body.dark-mode .mainBar > div:hover {
+  color: red;  /* Keep the hover effect */
+}
+
+body.dark-mode .mainBar > div:last-child {
+  background-color: #d84e55;  /* Red color stays */
+  color: white;  /* Text color stays white */
+}

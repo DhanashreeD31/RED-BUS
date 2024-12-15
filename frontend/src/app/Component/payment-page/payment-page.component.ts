@@ -9,6 +9,9 @@ import { BusService } from '../../service/bus.service';
   styleUrl: './payment-page.component.css'
 })
 export class PaymentPageComponent implements OnInit{
+  
+  isDarkMode: boolean = false;
+
   passseatarray:any[]=[]
   passfare:number=0
   routedetails:any=[]
@@ -65,6 +68,16 @@ ngOnInit(): void {
     console.log(data)
   })
 }
+
+toggleDarkMode(): void {
+  this.isDarkMode = !this.isDarkMode;
+  if (this.isDarkMode) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+}
+
 getloggedinuser():any{
     const loggedinuserjson=sessionStorage.getItem("Loggedinuser");
     if(loggedinuserjson){

@@ -9,4 +9,104 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 0;
 }
 
+.dark {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity)); /* Tailwind's dark background color */
+  color: rgba(255, 255, 255, var(--tw-text-opacity)); /* Text color in dark mode */
+}
+
+/* Apply to all icons and text inside group */
+html.dark .group:hover svg {
+  fill: white; /* Ensure all icons change color in dark mode */
+}
+
+html.dark .group:hover .text {
+  color: white; /* Ensure all text changes color in dark mode */
+}
+
+/* If you have other elements or use specific classes, you can target those too */
+html.dark .text-white {
+  color: white !important; /* Force text color in dark mode */
+}
+
+/* For example, SVGs in general */
+html.dark svg {
+  fill: white !important; /* Ensure all SVGs are white in dark mode */
+}
+.dark p {
+  color: white;
+}
+.dark i {
+  color: white;
+}
+
+/* Dark mode styles for mat-datepicker */
+body.dark .mat-datepicker-content {
+  background-color: #2e2c2c; /* Background */
+  color: white; /* Text */
+}
+
+body.dark .mat-calendar {
+  background-color: #252d3b;
+  color: white;
+}
+
+body.dark .mat-calendar .mat-calendar-body-cell-content {
+  color: white;
+}
+
+body.dark .mat-calendar .mat-calendar-body-active {
+  background-color: #c44141;
+  color: white;
+}
+body.dark .mat-calendar-period-button {
+  color: white !important; /* Make the month name white */
+}
+body.dark .mat-calendar-next-button,
+body.dark .mat-calendar-previous-button {
+  color: white !important; /* Ensure navigation buttons are white */
+}
+body.dark .mat-calendar-body-label {
+  color: white;
+}
+body.dark .mat-calendar-table-header th {
+  color: white;
+}
+body.dark .header {
+  color: #252d3b; /* Change the text color to white in dark mode */
+}
+/* Global dark mode styles */
+.dark {
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity)); /* Default text color */
+}
+
+/* Fix for radio button labels */
+.dark .form-radio-label {
+  color: rgba(255, 255, 255, 0.86); /* Ensure readable text in dark mode */
+}
+
+/* Ensure radio buttons retain visibility */
+.dark .radio-button {
+  accent-color: teal; /* Ensures visibility in dark mode */
+}
+
+/* Background and text color adjustments for specific blocks */
+.dark .content-block {
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity)); /* Adjusted dark background */
+  color: rgba(255, 255, 255, var(--tw-text-opacity)); /* Text remains readable */
+}
+
+/* Fix for other affected classes */
+.dark .passenger-contact-msg {
+  color: rgba(255, 255, 255, 0.86);
+  background-color: rgba(75, 85, 99, var(--tw-bg-opacity)); /* Muted dark background */
+}
+
+.dark .insure_title {
+  color: rgba(255, 255, 255, 0.86);
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity)); /* Dark background */
+}
+
 

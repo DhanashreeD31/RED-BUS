@@ -38,7 +38,7 @@ export class RightComponent implements OnInit{
     this.matchedbus=response.matchedBuses;
     this.routes=response.route;
     this.seats=response.busidwithseatobj;
-    // console.log(this.routes)
+    console.log(this.matchedbus)
    })
 
  }

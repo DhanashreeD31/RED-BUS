@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './bottom-tab.component.css'
 })
 export class BottomTabComponent {
+  
 @Input() filledseats:number[]=[]
 @Input() seatprice:number=0;
 @Input() routedetials:any;
@@ -15,6 +16,7 @@ export class BottomTabComponent {
 @Input() busid:string=''
 
 tabstate:boolean[]=[false,false,false,false,false]
+
 
 handletabstate(value:number):void{
   for(let i=0;i<this.tabstate.length;i++){

@@ -4,7 +4,7 @@ export interface Route {
       name: string;
       subLocations: string[];
     };
-    arrivalLocation: {
+    arrivalLocation:{
       name: string;
       subLocations: string[];
     };

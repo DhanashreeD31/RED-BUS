@@ -21,4 +21,7 @@ export class HeaderComponent {
       this.date=date
     });
   }
+  toggleDarkMode(): void {
+    document.body.classList.toggle('dark');
+}
 }

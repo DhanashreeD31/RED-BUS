@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bus-box',
@@ -6,6 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './bus-box.component.css'
 })
 export class BusBoxComponent {
+ 
+
+
 @Input() rating:number[]=[];
 @Input() operatorname:string=''
 @Input() bustype:string=''
@@ -21,6 +24,8 @@ seatprivce:number=0
 bustypename:string=''
 busdeparturetime:number=0;
 busarrivaltime:number=0
+isDarkMode: boolean = false;
+
 constructor(){}
 ngOnInit(): void{
   this.rating.forEach((item,index)=> {
@@ -31,7 +36,7 @@ ngOnInit(): void{
     this.totalreview=1
   }
   this.avgrating=+this.avgrating/this.totalreview
-  // console.log(this.routedetails)
+  console.log(this.routedetails)
   if(this.bustype ==='standard'){
     this.seatprivce=50 * Math.floor(this.routedetails.duration) /2;
     this.bustypename='standard;'
@@ -48,5 +53,13 @@ ngOnInit(): void{
   const numericvalue=parseInt(this.departuretime,10);
   this.busdeparturetime=numericvalue
   this.busarrivaltime=(numericvalue + this.routedetails.duration) % 24;
+}
+toggleDarkMode(): void {
+  this.isDarkMode = !this.isDarkMode;
+  if (this.isDarkMode) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
 }
 }

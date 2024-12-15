@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Bus } from "../model/bus.model"
+import {Bus} from "../model/bus.model"
 import { url } from '../config';
 import { Booking } from '../model/booking.model';
 
@@ -10,10 +10,10 @@ import { Booking } from '../model/booking.model';
 })
 export class BusService {
   private busbookapi: string = url + 'booking/'
-  private apiurl: string = url + 'routes/'
-  constructor(private http: HttpClient) { }
-  GETBUSDETAILS(depart: string, arrival: string, date: string): Observable<Bus[]> {
-    const url = `${this.apiurl}${depart}/${arrival}/${date}`;
+  private apiurl:string=url + 'routes/'
+  constructor( private http: HttpClient) { }
+  GETBUSDETAILS(depart:string,arrival:string,date:string): Observable<Bus[]>{
+    const url=`${this.apiurl}${depart}/${arrival}/${date}`;
     console.log(depart,arrival,date)
     return this.http.get<Bus[]>(url);
   }

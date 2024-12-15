@@ -30,4 +30,5 @@ handleselectedseats(seatno:number):void{
 handleboarddrop():void{
   this.boardanddrop=!this.boardanddrop
 }
+
 }
